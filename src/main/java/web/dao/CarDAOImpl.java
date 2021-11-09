@@ -3,12 +3,11 @@ package web.dao;
 import org.springframework.stereotype.Repository;
 import web.model.Car;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public class CarDAOImpl implements CarDAO {
-    private List<Car> cars = new ArrayList<>();
+    private List<Car> cars;
 
     public CarDAOImpl(List<Car> cars) {
         this.cars = cars;
@@ -20,12 +19,11 @@ public class CarDAOImpl implements CarDAO {
     }
 
     @Override
-    public List<Car> getCars(int index) {
+    public List<Car> get(int index) {
 
         if (index <= 5 && index > 0) {
             return cars.subList(0, index);
-        } else {
-            return cars.subList(0, 5);
         }
+        return cars.subList(0, 5);
     }
 }
