@@ -3,11 +3,12 @@ package web.dao;
 import org.springframework.stereotype.Repository;
 import web.model.Car;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public class CarDAOImpl implements CarDAO {
-    private List<Car> cars;
+    private List<Car> cars = new ArrayList<>();
 
     public CarDAOImpl() {
         cars.add(new Car("BMW", "black", 7));
