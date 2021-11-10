@@ -9,8 +9,7 @@ import java.util.List;
 public class CarDAOImpl implements CarDAO {
     private List<Car> cars;
 
-    public CarDAOImpl(List<Car> cars) {
-        this.cars = cars;
+    public CarDAOImpl() {
         cars.add(new Car("BMW", "black", 7));
         cars.add(new Car("Mercedes Benz", "white", 600));
         cars.add(new Car("Volkswagen", "red", 5));
